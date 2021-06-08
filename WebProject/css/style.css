@@ -1,0 +1,311 @@
+
+
+/* Modal CSS */
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.form-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+	background:white;
+}
+
+
+h1[class=title]{
+	font-size:30px;
+	color: #ff6600;
+	margin: 0;
+	margin-top: 20px;
+    display: inline;
+}
+
+button[class=adminAccess]{
+	margin-left:80%;
+	background-color: #ff6600; 
+	border: none;
+	color: white;
+	padding: 7px 12px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+form[id=generate_table_form]{
+	margin-top: 2%;
+	border-color: #ff6600;
+	border-radius: 2px;
+}
+
+div[class=generateTable]{
+	margin-top:0px;
+	 border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+input[class=table]{
+  height:20px;
+  padding: 0px 0px 0px 0px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=date]{
+	width:150px;
+	
+}
+input[type=time]{
+	width:150px;
+}
+input[type=number]{
+	width:70px;
+}
+
+button[id=generate_table], button[id=start_timer],  button[id=end_timer]
+{
+background-color: white; 
+  color: black; 
+  border-radius: 8px;
+  padding:5px;
+  margin-left:10px;
+  border: 2px solid #ff6600;
+}
+
+button[id=generate_table]:hover {
+  background-color: #ff6600;
+  color: white;
+}
+form[id=generate_table_form]{
+	padding: 10px;
+}
+label[class=table]{
+	padding: 0 0 0 10px;
+}
+
+input[class=modalForm], select[class=modalForm]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form[id=form-container]{
+	padding: 0 5px 0 5px;
+	margin-bottom: 10px;
+}
+input[class=gradeInput]{
+	width: 10%;
+	height: 40px;
+	padding: 0px 3px 0 3px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea{
+	width:98%;
+	height: 200px;
+	padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button[id=formCloseButton], button[id=closeAdminAccessButton]{
+	border: none;
+	background: none;
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+div[class=endPresentation]{
+	font-size:24px;
+}
+
+button[class=saveNotesAndGrade], input[type=submit]{
+ width: 100%;
+  background-color: #ff6600;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+div[id=form-popup]{
+	background-color:red;
+}
+
+button[class=dateOptions]{
+	background-color: #ff6600; 
+	border: none;
+	color: white;
+	margin: 10px 0px 5px 1px;
+	padding: 10px 32px;
+	text-align: center;
+	font-size: 16px;
+}
+
+button[class=recordBtn]{
+	background-color: #ff934d; 
+	height: 50px;
+	width: 50%;
+	border: none;
+	color: white;
+	margin-bottom:2px;
+	text-align: center;
+	font-size: 16px;
+	text-align: left;
+}
+button[class=recordBtnTaken]{
+	background-color: #f7ccb0; 
+	height: 50px;
+	width: 50%;
+	border: none;
+	color: white;
+	margin-bottom:2px;
+	text-align: center;
+	font-size: 16px;
+	text-align: left;
+}
+p[class=break]{
+	background-color: #bfbdbb; 
+	height: 30px;
+	width: 50%;
+	border: none;
+	color: white;
+	margin: 0 0 2px 0;
+	text-align: center;
+	font-size: 16px;
+	text-align: center;
+	font-size: 24px;
+}
+button[class=rate]{
+    background-color: #f7ccb0; 
+	height: 50px;
+	width: 4.5%;
+	text-align: center;
+	border: 2px solid #ff6600;
+	text-align: center;
+	font-size: 16px;
+	text-align: left;
+}
+button[class=rate]:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+div[id=outOfTime-box]{
+	position: fixed;
+	top: 40%;
+	left: 40%;
+	height: 150px;
+	width: 300px;
+	background: white;
+	border: 3px solid #ff6600;
+	font-size: 24px;
+	border-radius: 10px;
+	text-align:center;
+	z-index: 999;
+
+}
+
+button[id=removeTimeUpAlertButton]{
+	background-color: #ff6600; 
+	border: none;
+	color: white;
+	padding: 7px 12px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+div[id=admin-access-box]{
+	position: fixed;
+	top: 40%;
+	left: 40%;
+	height: 150px;
+	width: 300px;
+	background: white;
+	border: 3px solid #ff6600;
+	font-size: 36px;
+	border-radius: 10px;
+	z-index: 999;
+}
+input[id=admin-password-input]{
+	margin-top:30px;
+	margin-left:70px;
+	height:30px;
+}
+button[id="admin-access-button"]{
+	margin-left:10px;
+	margin-top:10px;
+	background-color: #ff6600; 
+	border: none;
+	color: white;
+	padding: 7px 12px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+.titleText{
+	width:37%;
+	margin-right:2%;
+	float: left;
+}
+.titleButton {
+	width:60%;
+	float: left;
+}
+.clearfix{
+	clear:both
+}
