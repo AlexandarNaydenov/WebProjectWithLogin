@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kristina Yotova, kristinajotova@gmail.com">
+    <link id="theme" rel="stylesheet" type="text/css" href="../WebProject/css/style.css" />
+    <script src="../WebProject/js/generateTable.js"></script>
+    <script src="../WebProject/js/setInitContent.js"></script>
+    <script src="../WebProject/js/SetInformationFromModalForm.js"></script>
+    <script src="../WebProject/js/setRecords.js"></script>
+    <script src="../WebProject/js/setNotesAndGrades.js"></script>
+    <script src="../WebProject/js/addAdminAccess.js"></script>
+    <title>Календар</title>
+</head>
+<body onload="initContent()">
+
+<div class="titleText">
+    <h1 class="title">Записване за презентации по WEB  </h1>
+</div>
+<div class="clearfix"></div>
+
+<div class="generateTable">
+    <form id="generate_table_form" onsubmit="return false;">
+        <label for="date" class="table">Дата:</label>
+        <input class="table" type="date" id="date" >
+        <label for="time" class="table">Начален час:</label>
+        <input class="table" type="time" id="time">
+        <label for="count" class="table">Брой презентиращи:</label>
+        <input class="table" type="number" id="count">
+        <label for="interval" class="table">Времеви интервал:</label>
+        <input class="table" type="number" id="interval">
+        <label for="breaks" class="table">Брой почивки: (15 минути)</label>
+        <input class="table" type="number" id="breaks">
+        <button id="generate_table" class="generate_table" onclick="generateTable()">Генерирай таблица</button>
+    </form>
+</div>
+
+<main>
+    <div id="dateButtonsContainer">
+        <div id="buttons">
+        </div>
+    </div>
+    <div id="records">
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" id="modal-content">
+            <span class="close">&times;</span>
+            <h2>Въведете данни за презентация</h2>
+            <form id="modal_form" onsubmit="return false">
+                <label for="name" >Име на презентиращия:</label>
+                <input class="modalForm" type="text" id="name" required>
+                <label for="fn">Факултет номер:</label>
+                <input class="modalForm" type="text" id="fn" required>
+                <label for="topic">Тема:</label>
+                <input class="modalForm" type="text" id="topic" required>
+                <label for="category">Категория:</label>
+                <select class="modalForm" id="category" name="category">
+                    <option value="js">JavaScript</option>
+                    <option value="css">CSS</option>
+                    <option value="html">HTML</option>
+                    <option value="websocket">Web Socket</option>
+                </select>
+                <label for="pass">Парола:</label>
+                <input class="modalForm" type="password" id="pass" required>
+            </form>
+        </div>
+    </div>
+    <div class="form-popup" id="myForm">
+        <form id="form-container">
+            <button id="formCloseButton" onclick="closeFormButton()">&times;</button>
+            <h2>Оцени</h2>
+
+            <label for="notes"><b>Записки: </b></label>
+            <textarea  id="notes" class="textNotes">  </textarea>
+
+            <label for="grade"><b>Оценка: </b></label>
+            <input class="gradeInput" type="number" id="grade">
+            <button class="saveNotesAndGrade" type="button" onclick="saveNotesAndGrades()">Запази</button>
+            <div class="endPresentation"><p>Край на презентацията след <span id="clockTime">00:00</span> минути!</p></div>
+            <button id="start_timer" type="button" onclick="startTimer()">Стартирай таймер</button>
+            <button id="end_timer" type="button" onclick="endTimer()">Нулирай таймер</button>
+        </form>
+    </div>
+    <div id="outOfTime-container"></div>
+    <div id="admin-access-container"></div>
+</main>
+<footer>
+</footer>
+
+</body>
+</html>
