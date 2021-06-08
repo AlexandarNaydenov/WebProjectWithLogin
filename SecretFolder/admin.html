@@ -10,6 +10,7 @@
     <script src="../WebProject/js/setRecords.js"></script>
     <script src="../WebProject/js/setNotesAndGrades.js"></script>
     <script src="../WebProject/js/addAdminAccess.js"></script>
+	<script src="../WebProject/js/changeTimes.js"></script>
     <title>Календар</title>
 </head>
 <body onload="initContent()">
@@ -33,6 +34,13 @@
         <input class="table" type="number" id="breaks">
         <button id="generate_table" class="generate_table" onclick="generateTable()">Генерирай таблица</button>
     </form>
+	<form>
+			<label for="date1" class="table">Дата:</label>
+			<input class="table" type="date" id="date1" >
+			<label for="hour" class="table">Час:</label>
+			<input class="table" type="time" id="hour" >
+			<button onclick="changeTimes()">Промени часовете</button>
+		</form>
 </div>
 
 <main>
