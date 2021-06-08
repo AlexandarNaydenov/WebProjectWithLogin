@@ -1,6 +1,6 @@
 
 function getRecordsByDate(date){
-    fetch('http://localhost/WebProject/php/getRecords.php')
+    fetch('http://localhost/WebProjectFinal/WebProject/php/getRecords.php')
         .then(response => response.json())
         .then(function(data) {
             setRecordsInHTML(data, date);

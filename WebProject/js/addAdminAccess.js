@@ -1,7 +1,7 @@
 let adminAccess = false;
 
 function addAdminAccess(){
-    window.open("http://localhost/WebProject/php/login.php");
+    window.open("http://localhost/WebProjectFinal/WebProject/php/login.php");
 }
 
 function changeAdminAccess(){

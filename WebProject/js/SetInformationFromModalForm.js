@@ -52,7 +52,7 @@ function insertInformationIntoRecord(recordID){
 
 
     var currPassword;
-    fetch('http://localhost/WebProject/php/getRecords.php')
+    fetch('http://localhost/WebProjectFinal/WebProject/php/getRecords.php')
         .then(response => response.json())
         .then(function(data) {
             data.forEach(element => {
@@ -60,7 +60,7 @@ function insertInformationIntoRecord(recordID){
                     currPassword = element.password.toString();
                     if(!currPassword.localeCompare(password) || !currPassword.localeCompare("")){
                         const xhr = new XMLHttpRequest();
-                        xhr.open("POST", "./php/addInformation.php",false);
+                        xhr.open("POST", "../WebProject/php/addInformation.php",false);
                         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                         xhr.send("&id="+recordID+"&name="+name+"&fn="+fn+"&topic="+topic+"&category="+category+"&password="+password);
                         document.getElementById(element.record_date.toString()).click();

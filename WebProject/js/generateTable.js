@@ -34,7 +34,7 @@ function generateTable(){
         }
         end=timeArr[0]+ ":"+timeArr[1]+":00";
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "./php/addRecord.php",false);
+        xhr.open("POST", "../WebProject/php/addRecord.php",false);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.send("&date="+date+"&startingTime="+start+"&endingTime="+end+"&information="+information);
     }

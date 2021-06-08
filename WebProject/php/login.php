@@ -99,7 +99,7 @@ session_start();
 
         if ($_POST['username'] == 'admin' &&
             $_POST['password'] == '1234') {
-            header( 'Location: http://localhost/WebProject/admin.html' );
+            header( 'Location: http://localhost/WebProjectFinal/SecretFolder/admin.html' );
         }else {
             $msg = 'Wrong username or password';
         }

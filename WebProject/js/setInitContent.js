@@ -2,7 +2,7 @@ function initContent(){
 
     changeAdminAccess();
 
-    fetch('http://localhost/WebProject/php/getRecords.php')
+    fetch('http://localhost/WebProjectFinal/WebProject/php/getRecords.php')
         .then(response => response.json())
         .then(function(data) {
             var currDate = "0000-00-00";

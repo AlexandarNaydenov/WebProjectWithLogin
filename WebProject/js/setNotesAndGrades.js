@@ -17,7 +17,7 @@ function saveNotesAndGrades(){
     var grade = document.getElementById("grade").value;
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "./php/addNotesAndGrade.php",false);
+    xhr.open("POST", "../WebProject/php/addNotesAndGrade.php",false);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send("&id="+currRecordID+"&notes="+notes+"&grade="+grade);
 
@@ -29,11 +29,11 @@ function startTimer() {
 
     var duration;
 	clearInterval(interval);
-    fetch('http://localhost/WebProject/php/getRecords.php')
+    fetch('http://localhost/WebProjectFinal/WebProject/php/getRecords.php')
         .then(response => response.json())
         .then(function(data) {
             data.forEach(element => {
-                if(element.id == currRecordID){
+                if(element.id === currRecordID){
                     var s = element.record_starting_time.split(':');
                     var e = element.record_ending_time.split(':');
 
