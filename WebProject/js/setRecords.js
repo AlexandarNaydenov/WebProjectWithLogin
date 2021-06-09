@@ -41,6 +41,19 @@ function setRecordsInHTML(records, currDate) {
                     addNotesAndGrades(record.id);
                 });
                 docElement.appendChild(lectorButton);
+
+                //Remove record button
+                let removeRecordButton = document.createElement("BUTTON");
+                removeRecordButton.innerHTML = "Премахни";
+                removeRecordButton.setAttribute("id","Remove"+parseInt(record.id));
+                removeRecordButton.setAttribute("class","rate");
+                if(!checkAdminAccess()){
+                    removeRecordButton.style.visibility = 'hidden';
+                }
+                removeRecordButton.addEventListener("click", function (){
+                    changeTimes(record.id);
+                });
+                docElement.appendChild(removeRecordButton);
             }else{
                 let para = document.createElement("p");
                 let node = document.createTextNode("Почивка");
