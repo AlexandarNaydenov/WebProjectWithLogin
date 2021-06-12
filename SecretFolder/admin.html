@@ -12,6 +12,7 @@
     <script src="../WebProject/js/addAdminAccess.js"></script>
 	<script src="../WebProject/js/changeTimes.js"></script>
     <script src="../WebProject/js/exportRecordsIntoCSV.js"></script>
+    <script src="../WebProject/js/importFromCSV.js"></script>
     <title>Календар</title>
 </head>
 <body onload="initContent()">
@@ -88,6 +89,11 @@
     <div id="outOfTime-container"></div>
     <div id="admin-access-container"></div>
     <button onclick="exportRecordsIntoCSV()">Download Table</button>
+    <button onclick="importFromCSV()">Upload Table</button>
+    <form id="importFileForm">
+        <input type="file" id="imported_file" name="filename">
+        <input type="button" onclick="importFromCSV()">
+    </form>
 </main>
 <footer>
 </footer>
