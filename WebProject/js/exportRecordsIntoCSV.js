@@ -7,8 +7,6 @@ function exportRecordsIntoCSV(){
     })
 }
 
-
-
 function downloadRecords(records){
 
     let csvContent = "data:text/csv;charset=utf-8,";
@@ -17,7 +15,6 @@ function downloadRecords(records){
         let row = element.id + ";" + element.record_date + ";" + element.record_starting_time + ";" +element.record_ending_time + ";" +element.is_break + ";" +element.student_name + ";" +element.student_fn + ";" +element.presentation_topic + ";" +element.presentation_category + ";" +element.password + ";" +element.lector_notes + ";" +element.lector_grade;
         csvContent += row + "\r\n";
     })
-
 
     var encodedUri = encodeURI(csvContent);
     var link = document.createElement("a");

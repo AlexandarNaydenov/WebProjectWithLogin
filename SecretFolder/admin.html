@@ -36,6 +36,12 @@
         <input class="table" type="number" id="breaks">
         <button id="generate_table" class="generate_table" onclick="generateTable()">Генерирай таблица</button>
     </form>
+
+    <button onclick="exportRecordsIntoCSV()">Download Table</button>
+    <form id="importFileForm">
+        <input type="file" id="imported_file" name="filename">
+        <input type="button" value="Upload Table" onclick="importFromCSV()">
+    </form>
 </div>
 
 <main>
@@ -88,12 +94,6 @@
     </div>
     <div id="outOfTime-container"></div>
     <div id="admin-access-container"></div>
-    <button onclick="exportRecordsIntoCSV()">Download Table</button>
-    <button onclick="importFromCSV()">Upload Table</button>
-    <form id="importFileForm">
-        <input type="file" id="imported_file" name="filename">
-        <input type="button" onclick="importFromCSV()">
-    </form>
 </main>
 <footer>
 </footer>

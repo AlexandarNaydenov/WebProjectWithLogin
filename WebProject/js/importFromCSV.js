@@ -1,7 +1,19 @@
+
 function importFromCSV(){
-    fetch("../WebProject/files/records.csv")
-        .then(response => response.text())
-        .then(data => processData(data))
+    let files = document.getElementById("imported_file").files;
+    let file = files[0];
+
+    let reader = new FileReader();
+
+    reader.readAsText(file, "UTF-8");
+
+    reader.onload = loaded;
+}
+
+function loaded(evt) {
+    let fileString = evt.target.result;
+    processData(fileString)
+    location.reload();
 }
 
 function processData(data){
@@ -19,8 +31,6 @@ function processData(data){
         let password = row[9]
         let lector_notes = row[10];
         let lector_grade = row[11];
-
-        console.log(row);
 
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "../WebProject/php/importRecord.php", false);
