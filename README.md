@@ -23,3 +23,5 @@ TEST
 <a href="./images/file.txt" target="_top">File.txt</a>
 
 - [BMW](#bmw)
+
+[TestREADME](testFolder/README.md)
