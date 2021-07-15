@@ -90,5 +90,5 @@ Reference-style:
 
 ### Youtube or video content
 >Or, in pure Markdown, but losing the image sizing and border:
-[![IMAGE ALT TEXT HERE](https://www.youtube.com/watch?v=H5bEUc72TuE)](https://www.youtube.com/watch?v=H5bEUc72TuE)
+[![IMAGE ALT TEXT HERE](images/bmwM2.png)](https://www.youtube.com/watch?v=H5bEUc72TuE)
 
